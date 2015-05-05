@@ -46,7 +46,7 @@ ob_start(); ?>
             if( !in_array($example, $exclude) ){
               
               $files = scandir("./examples/".$example);
-              
+              sort($files, SORT_NATURAL );
               $cnt = 0;
               $spacer = 10;
               
@@ -85,7 +85,7 @@ $cache_string = ob_get_contents();
 ob_end_clean();
 
 
-//echo $cache_string;
+echo $cache_string;
 $fileHandler = fopen(getcwd().'/index.html', 'w+');
 fwrite($fileHandler, $cache_string);
 fclose($fileHandler);
