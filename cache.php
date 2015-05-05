@@ -34,6 +34,7 @@ ob_start(); ?>
           <li><a href="pages/slides/01-Introduction-into-PHP/01-Introduction-into-PHP.html">01-Introduction-into-PHP</a></li>
           <li><a href="pages/slides/01-Version-Control-Systems/01-Version-Control-Systems.html">01-Version-Control-Systems</a></li>
           <li><a href="pages/slides/02-HTML-basics/02-HTML-basics.html">02-HTML-basics.html</a></li>
+          <li><a href="pages/slides/03-CSS/03-CSS.html">03-CSS.html</a></li>
         </ul>
 
         <h2>Examples( HTML format)</h2>
@@ -42,21 +43,21 @@ ob_start(); ?>
           $examples = scandir("./examples");
           $exclude = ['.', '..'];
           foreach($examples as $example ){
-            
+
             if( !in_array($example, $exclude) ){
-              
+
               $files = scandir("./examples/".$example);
               sort($files, SORT_NATURAL );
               $cnt = 0;
               $spacer = 10;
-              
+
               foreach($files as $file ){
-              
+
                 $ext = strrchr($file, '.');
                 if(!in_array($file, $exclude) && in_array($ext, ['.html', '.php'])){
-                  
+
                   if($cnt === 0){
-                    echo '<li><a href="https://github.com/Academy-Soft-Intellect/PHP-MySQL-Course/tree/master/examples/'.$example.'">'.$example.'</a> </li> ';  
+                    echo '<li><a href="https://github.com/Academy-Soft-Intellect/PHP-MySQL-Course/tree/master/examples/'.$example.'">'.$example.'</a> </li> ';
                   }
 
                   echo '<li>';
@@ -77,7 +78,6 @@ ob_start(); ?>
       </footer>
     </div>
     <script src="javascripts/scale.fix.js"></script>
-    
   </body>
 </html>
 <?php
