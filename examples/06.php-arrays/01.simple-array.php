@@ -14,11 +14,11 @@
 	$first_arr[] = 466;
 	$first_arr[] = 5;
 
-	echo "<p>" . $array[0] . "</p>";
-	echo "<p>" . $array[1] . "</p>";
-	echo "<p>" . $array[2] . "</p>";
-	echo "<p>" . $array[3] . "</p>";
-	echo "<p>" . $array[4] . "</p>";
+	echo "<p>" . $first_arr[0] . "</p>";
+	echo "<p>" . $first_arr[1] . "</p>";
+	echo "<p>" . $first_arr[2] . "</p>";
+	echo "<p>" . $first_arr[3] . "</p>";
+	echo "<p>" . $first_arr[4] . "</p>";
 ?>
 </body>
 </html>
