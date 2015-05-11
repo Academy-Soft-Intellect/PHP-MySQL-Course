@@ -19,6 +19,9 @@
 	
 	echo "<br /><br /><br /><br /><br />";
 	
+	
+
+
 	$number = 2;
 	
 	$power = 9;
@@ -26,8 +29,9 @@
 	
 	$result = 1;
 	
-	while($power >=	$current_power++)
+	while($power >=	$current_power++){
 		$result *= $number;
+	}
 		
 		
 	echo "$number на степен $power е равно на $result";
