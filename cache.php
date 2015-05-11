@@ -36,7 +36,9 @@ ob_start(); ?>
           <li><a href="pages/slides/02-HTML-basics/02-HTML-basics.html">02-HTML-basics.html</a></li>
           <li><a href="pages/slides/03-CSS/03-CSS.html">03-CSS.html</a></li>
           <li><a href="pages/slides/04-PHP-BASICS/04-PHP-BASICS.html">04-PHP-BASICS.html</a></li>
+          <li><a href="pages/slides/05.DEBUG-1/05.DEBUG-1.html">05.DEBUG-1.html</a></li>
           <li><a href="pages/slides/05.PHP-BASICS-2/05.PHP-BASICS-2.html">05.PHP-BASICS-2.html</a></li>
+          <li><a href="pages/slides/06.PHP-BASICS-ARRAY/06.PHP-BASICS-ARRAY.html">06.PHP-BASICS-ARRAY.html</a></li>
         </ul>
 
         <h2>Examples( HTML format)</h2>
