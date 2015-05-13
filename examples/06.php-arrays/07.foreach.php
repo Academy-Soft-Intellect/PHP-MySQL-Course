@@ -44,9 +44,12 @@
 
     echo "<tr>";
 	
-    foreach ($array as $value) {
+    foreach ($array as &$value) {
+
         echo "<td>" . $value . "</td>";
+        $value = $value."==";
     }
+    var_dump($array);
 	
 	echo "</tr>";
     
