@@ -7,7 +7,9 @@
 <body>
 
 <?php
-	$arr = array('IT-Academy', 2,	"my test");
+	$arr = array('IT-Academy', 2,	"my test",
+         array("Penka", 'base')
+    );
 
 	echo "<p><strong>var_dump() </strong></p>";
 	echo "<pre>";

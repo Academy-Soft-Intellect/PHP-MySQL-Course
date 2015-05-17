@@ -1,22 +1,23 @@
-
 <?php
-	function printHeader() {
+
+
+	function printHeader($title) {
 		echo "<!DOCTYPE html>" .
 			 "<head lang=\"en\">".
 			 "<meta charset=\"UTF-8\">".
-			 "<title>Въведение във Функциите</title>".
+			 "<title>$title</title>".
 			 "<meta charset=\"UTF-8\">".
 			 "</head>".
-			 "<body>";
+			 "<body><div>:$title</div>";
 	}
 
 	function printFooter() {
-		echo '</body>'.
+		echo 'FOOTER</body>'.
 			 '</html>';
 	}
 
 
-	printHeader();
+	printHeader("HEEADER");
 	
 	echo "Hello Functions!!!";
 	

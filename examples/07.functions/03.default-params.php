@@ -14,14 +14,14 @@
 	
 	$result = multiply($number, $multiplier);
 	
-	echo "12 умножено по 3 = $number <br />";
+	echo "12 умножено по 3 = $result <br />";
 
 	$result = multiply($number);
 
-	echo "(Без множител) 12 умножено по 3 = $number <br />";
+	echo "(Без множител) 12 умножено по 3 = $result <br />";
 	
 	
-	function multiply($number, $multiplier = 3) {
+	function multiply($number, $multiplier = 2) {
 		$number *= $multiplier;
 		return $number;
 	}

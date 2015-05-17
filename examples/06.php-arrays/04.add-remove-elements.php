@@ -11,7 +11,8 @@
 $array = array();
 $array[] = "едно";
 $array[1] = "две";
-$array[] = 3;
+$array[10] = 3;
+$array[] = 'POSLEDNA';
 
 echo " <strong>Всички елементи</strong><br/>";
 

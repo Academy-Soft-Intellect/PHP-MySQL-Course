@@ -56,7 +56,7 @@ echo "<hr>";
 	
 	// unset($user['Име']);
 	
-	if(isset($user['Име'])){
+	if(isset($user['Имеsdfsdf'])){
 		echo "Масивът user съдържа елемент с ключ \"Име\"";
 	} else {
 		echo "Масивът user не съдържа елемент с ключ \"Име\"";
@@ -68,7 +68,7 @@ $colors = array(
     "залено", "жълто", 'синьо');
 
 echo "Стрингов низ генериран от масив с помощта на функцията Implode: <br />";
-$color_string = implode(", ", $colors);
+$color_string = implode(",", $colors);
 
 echo $color_string;
 

@@ -48,7 +48,9 @@
 
         echo "<td>" . $value . "</td>";
         $value = $value."==";
+        echo "<td>" . $value . "</td>";
     }
+    
     var_dump($array);
 	
 	echo "</tr>";
