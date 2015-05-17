@@ -1,11 +1,19 @@
 ﻿<?php
 	
-	$arr = array(15, 13, 5, 6, 8, -11);
+	$arr = array(15, 13, 5, 6, 8, -11, 'a', 'b', 'c');
+
 	
 	echo "Преди сортировка:<br />";
 	echo "<pre>";
 	print_r($arr);
 	echo "</pre>";
+
+    sort($arr, SORT_NATURAL);
+
+    echo "<pre>";
+    print_r($arr);
+    echo "</pre>";
+
 	
 	$n = sizeof($arr);
     for ($i = 1; $i < $n; $i++) {
