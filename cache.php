@@ -40,6 +40,7 @@ ob_start(); ?>
           <li><a href="pages/slides/05.PHP-BASICS-2/05.PHP-BASICS-2.html">05.PHP-BASICS-2.html</a></li>
           <li><a href="pages/slides/06.PHP-BASICS-ARRAY/06.PHP-BASICS-ARRAY.html">06.PHP-BASICS-ARRAY.html</a></li>
           <li><a href="pages/slides/07.FUNCTIONS/07.FUNCTIONS.html">07.FUNCTIONS.html</a></li>
+          <li><a href="pages/slides/08.WORKING-WITH-FORMS/08.WORKING-WITH-FORMS.html">08.WORKING-WITH-FORMS.html</a></li>
         </ul>
 
         <h2>Examples( HTML format)</h2>
@@ -67,7 +68,7 @@ ob_start(); ?>
 
                   echo '<li>';
                   echo '<a style="padding-left:'.( $spacer*5).'px" href="https://github.com/Academy-Soft-Intellect/PHP-MySQL-Course/tree/master/examples/'.$example.'/'.$file.'">'.$file.'</a>';
-                  echo ' <a href="examples/'.$example.'/'.$file.'">( <b>view</b> )</a> ';
+                  echo ' <a href="http://course.mraiur.com/examples/'.$example.'/'.$file.'">( <b>view</b> )</a> ';
                   echo '</li>';
                   $cnt++;
                 }
