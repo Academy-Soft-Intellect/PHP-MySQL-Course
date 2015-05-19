@@ -61,7 +61,7 @@ ob_start(); ?>
               foreach($files as $file ){
 
                 $ext = strrchr($file, '.');
-                if(!in_array($file, $exclude) && in_array($ext, ['.html', '.php'])){
+                if(!in_array($file, $exclude) && in_array($ext, ['.html', '.php', '.sql'])){
 
                   if($cnt === 0){
                     echo '<li><a href="https://github.com/Academy-Soft-Intellect/PHP-MySQL-Course/tree/master/examples/'.$example.'">'.$example.'</a> </li> ';
