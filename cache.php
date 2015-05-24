@@ -63,7 +63,7 @@ ob_start(); ?>
           
           foreach($examples as $example ){
 
-            if( !in_array($example, $exclude) ){
+            if( !in_array($example, $exclude) && is_dir("./examples/".$example) ){
 
               $files = scandir("./examples/".$example);
               sort($files, SORT_NATURAL );
