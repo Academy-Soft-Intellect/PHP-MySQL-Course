@@ -259,3 +259,16 @@ footer {
     color:#444;
   }
 }
+
+.lectures-links{
+  margin-left:25px;
+}
+
+.lectures-links h4{
+  margin:0px ;
+}
+
+.lectures-links a{
+  display:list-item;
+  list-style-type: square;
+}

@@ -29,27 +29,38 @@ ob_start(); ?>
       <section>
         <h2>Slides( HTML format)</h2>
         <ul class="slideList">
-          <li><a href="pages/slides/01-Introduction-into-Course/01-Introduction-into-Course.html">01-Introduction-into-Course</a></li>
-          <li><a href="pages/slides/01-Introduction-into-Development/01-Introduction-into-Development.html">01-Introduction-into-Development</a></li>
-          <li><a href="pages/slides/01-Introduction-into-PHP/01-Introduction-into-PHP.html">01-Introduction-into-PHP</a></li>
-          <li><a href="pages/slides/01-Version-Control-Systems/01-Version-Control-Systems.html">01-Version-Control-Systems</a></li>
-          <li><a href="pages/slides/02-HTML-basics/02-HTML-basics.html">02-HTML-basics.html</a></li>
-          <li><a href="pages/slides/03-CSS/03-CSS.html">03-CSS.html</a></li>
-          <li><a href="pages/slides/04-PHP-BASICS/04-PHP-BASICS.html">04-PHP-BASICS.html</a></li>
-          <li><a href="pages/slides/05.DEBUG-1/05.DEBUG-1.html">05.DEBUG-1.html</a></li>
-          <li><a href="pages/slides/05.PHP-BASICS-2/05.PHP-BASICS-2.html">05.PHP-BASICS-2.html</a></li>
-          <li><a href="pages/slides/06.PHP-BASICS-ARRAY/06.PHP-BASICS-ARRAY.html">06.PHP-BASICS-ARRAY.html</a></li>
-          <li><a href="pages/slides/07.FUNCTIONS/07.FUNCTIONS.html">07.FUNCTIONS.html</a></li>
-          <li><a href="pages/slides/08.WORKING-WITH-FORMS/08.WORKING-WITH-FORMS.html">08.WORKING-WITH-FORMS.html</a></li>
-          <li><a href="pages/slides/09.MYSQL-BASIC/09.MYSQL-BASIC.html">09.MYSQL-BASIC.html</a></li>
-          <li><a href="pages/slides/10.MYSQL-ADVANCED/10.MYSQL-ADVANCED.html">10.MYSQL-ADVANCED.html</a></li>
+          <?php
+          $exclude = ['.', '..'];
+
+
+          $LECTURES_PATH = "./pages/slides";
+          $lectures = scandir($LECTURES_PATH);
+          
+          foreach($lectures as $lecture ){
+              if(!in_array($lecture, $exclude) && is_dir($LECTURES_PATH."/".$lecture)){
+                  ?>
+                  <li>
+                    <a href="pages/slides/<?=$lecture?>/<?=$lecture?>.html"><?=$lecture?></a>
+                    <?php
+                    if(file_exists($LECTURES_PATH."/".$lecture."_links.html")){
+                        echo "<div class='lectures-links'><h4>Links</h4>";
+                        echo file_get_contents($LECTURES_PATH."/".$lecture."_links.html");
+                        echo "</div>";
+                    }
+                    ?>
+                  </li>
+                  <?php
+
+              }
+          }
+          ?>
         </ul>
 
         <h2>Examples( HTML format)</h2>
         <ul class="slideList">
           <?php
           $examples = scandir("./examples");
-          $exclude = ['.', '..'];
+          
           foreach($examples as $example ){
 
             if( !in_array($example, $exclude) ){
