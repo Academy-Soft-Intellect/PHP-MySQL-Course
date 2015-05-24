@@ -42,6 +42,7 @@ ob_start(); ?>
           <li><a href="pages/slides/07.FUNCTIONS/07.FUNCTIONS.html">07.FUNCTIONS.html</a></li>
           <li><a href="pages/slides/08.WORKING-WITH-FORMS/08.WORKING-WITH-FORMS.html">08.WORKING-WITH-FORMS.html</a></li>
           <li><a href="pages/slides/09.MYSQL-BASIC/09.MYSQL-BASIC.html">09.MYSQL-BASIC.html</a></li>
+          <li><a href="pages/slides/10.MYSQL-ADVANCED/10.MYSQL-ADVANCED.html">10.MYSQL-ADVANCED.html</a></li>
         </ul>
 
         <h2>Examples( HTML format)</h2>
