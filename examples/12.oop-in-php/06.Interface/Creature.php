@@ -1,6 +1,6 @@
 ﻿<?php 
 
 interface Creature {	
-	public function greet();
+	public function greet($Greed );
 }
 ?>

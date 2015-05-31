@@ -13,7 +13,7 @@ class Dog implements Creature{
 	}
 	
 	// Required by the Interface
-	public function greet()
+	public function greet($additionalGreed = '')
 	{
 		echo "<div style='border:3px dotted blue; padding: 3px; margin:10px;'>";
 		echo "Hello, I Am an Dog<br />";

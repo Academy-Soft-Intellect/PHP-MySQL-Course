@@ -14,7 +14,7 @@ class Human implements Creature {
 	}
 
 	// Required by the Interface
-	public function greet()
+	public function greet($additionalGreed = '')
 	{
 		echo "<div style='border:3px dotted red; padding: 3px; margin:10px;'>";
 		echo "Hello, I Am $this->name <br />";
