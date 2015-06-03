@@ -1,0 +1,246 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 4.4.2.2 (Linux)"/>
+	<meta name="author" content="mraiur "/>
+	<meta name="created" content="2015-06-03T19:42:32.355397499"/>
+	<meta name="changedby" content="mraiur "/>
+	<meta name="changed" content="2015-06-03T21:19:01.311616028"/>
+	<style type="text/css">
+		@page { margin: 0.79in }
+		p { margin-bottom: 0.1in; line-height: 120% }
+	</style>
+</head>
+<body lang="bg-BG" dir="ltr">
+<p align="center" style="margin-bottom: 0in; line-height: 100%"><font color="#6666ff"><font size="6" style="font-size: 24pt"><b>Практически
+проект</b></font></font></p>
+<p align="center" style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p align="center" style="margin-bottom: 0in; line-height: 100%"><font color="#6666ff"><font size="6" style="font-size: 24pt">Онлайн
+магазин за аксесоари за телефони.</font></font></p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><font color="#6666ff"><font size="5" style="font-size: 18pt"><b>Основни
+изисквания</b></font></font></p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><font color="#000000"><font size="4" style="font-size: 14pt"><b>-
+База данни:</b></font></font></p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<ol>
+	<li/>
+<p style="margin-bottom: 0in; line-height: 100%"><font color="#000000"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">Трябва
+	да се направи потребител в MySQL с ограничен
+	достъп ( SELECT, INSERT, UPDATE, DELETE )  до 
+	</span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><b>accessories_shop.</b></font></font></p>
+	<li/>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+	<font color="#000000"><font size="3" style="font-size: 12pt">Необходими
+	са следните таблици в MySQL база данни с
+	име accessories_shop.</font></font></p>
+</ol>
+<ul>
+	<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+	</p>
+	<li/>
+<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%; page-break-before: auto">
+	<font color="#000000"><font size="3" style="font-size: 12pt"><b>product</b><br/>
+<font color="#006600">Product_id</font>
+	– ID на продукт<br/>
+<font color="#006600">Name</font> –
+	Име на продукт<br/>
+<font color="#006600">InStock</font>
+	– Дали продукта е в наличност<br/>
+</font></font><br/>
+
+	</p>
+	<li/>
+<p style="margin-bottom: 0in; line-height: 100%"><font color="#000000"><font size="3" style="font-size: 12pt"><b>basket
+	</b></font></font>
+	</p>
+	<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+	<font color="#000000"><font size="3" style="font-size: 12pt"><font color="#006600">Basket_id</font>
+	– ID на текуща поръчка</font></font></p>
+	<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+	<font color="#000000"><font size="3" style="font-size: 12pt"><font color="#006600">Order_completed</font>
+	-  дали поръчката е завършена<br/>
+<font color="#006600">Basket_session_hash</font>
+	– Номер на сесия за разграничаване на
+	поръчките<br/>
+<font color="#006600">Email</font> – Емайл
+	на клиента</font></font></p>
+	<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+	<font color="#000000"><font size="3" style="font-size: 12pt"><font color="#006600">Name</font>
+	- Име на клиента<br/>
+</font></font><br/>
+
+	</p>
+	<li/>
+<p style="margin-bottom: 0in; line-height: 100%"><font color="#000000"><font size="3" style="font-size: 12pt"><b>basket_products
+	 ( линкваща таблица )<br/>
+</b><font color="#006600"><span style="font-weight: normal">Product_id</span></font><span style="font-weight: normal">
+	- ( ID на продукт ) <br/>
+</span><font color="#006600"><span style="font-weight: normal">Basket_id</span></font><span style="font-weight: normal">
+	 - ID на текуща поръчка</span><span style="font-weight: normal"><br/>
+</span><b><br/>
+</b></font></font><br/>
+
+	</p>
+</ul>
+<p style="margin-bottom: 0in; line-height: 100%"><font color="#000000"><font size="4" style="font-size: 14pt"><b>-
+Страници :<br/>
+<br/>
+</b></font></font><br/>
+
+</p>
+<ol>
+	<li/>
+<p style="margin-bottom: 0in; line-height: 100%"><font color="#000000"><font size="4" style="font-size: 14pt"><span style="font-weight: normal">Спис</span><span style="font-weight: normal">ък
+	с продуктите.<br/>
+</span><span style="font-weight: normal">Показване
+	на продуктите по един на ред на всеки
+	ред трябва да има.<br/>
+Име, снимка цена
+	и бутон за добавяне на продукт към
+	кошницата.<br/>
+</span></font></font><br/>
+
+	</p>
+	<li/>
+<p style="margin-bottom: 0in; line-height: 100%"><font color="#000000"><font size="4" style="font-size: 14pt"><span style="font-weight: normal">Страница
+	която да добавя или да маха продукти
+	от кошницата.<br/>
+„</span><span style="font-weight: normal">Системна“
+	страница която да обновява списъка на
+	кошницата.<br/>
+След като операцията е
+	завършена трябва да се пренасочи към
+	страницата от която е направена
+	операцията.<br/>
+</span></font></font><br/>
+
+	</p>
+	<li/>
+<p style="margin-bottom: 0in; line-height: 100%"><font color="#000000"><font size="4" style="font-size: 14pt"><span style="font-weight: normal">Преглед
+	на продуктите в кошницата.<br/>
+</span><span style="font-weight: normal">Списък
+	само с продуктите в кошницата, но вместо
+	бутон за добавяне трябва да има бутон
+	за премахване на продукт от кошницата.<br/>
+Форма
+	за Е-майл и Име на клиента.<br/>
+Поръчката
+	не може да бъде завършена ако не е
+	попълнен Е-майла и Името.<br/>
+Минимална
+	дължина на полето за име трябва да е 3
+	символа.  <br/>
+Минимална дължина на полето
+	за Е-Майл трябва да е 8 символа.<br/>
+</span></font></font><br/>
+
+	</p>
+	<li/>
+<p style="margin-bottom: 0in; line-height: 100%"><font color="#000000"><font size="4" style="font-size: 14pt"><span style="font-weight: normal">Завършване
+	на поръчка.<br/>
+</span><span style="font-weight: normal">След
+	валидацията трябва да се запише поръчката
+	в базата и да бъде отбелязана за
+	„завършена“.</span></font></font></p>
+</ol>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><font color="#6666ff"><font size="5" style="font-size: 18pt"><b>Допълнителни
+изисквания</b></font></font></p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><font color="#000000"><font size="4" style="font-size: 14pt"><b>-
+База данни:<br/>
+</b></font></font><br/>
+
+</p>
+<ul>
+	<li/>
+<p style="margin-bottom: 0in; line-height: 100%"><font color="#000000"><font size="3" style="font-size: 12pt"><b>basket
+	</b></font></font>
+	</p>
+	<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+	<font color="#000000"><font size="3" style="font-size: 12pt"><font color="#006600">Basket_id</font>
+	– ID на текуща поръчка</font></font></p>
+	<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+	<font color="#000000"><font size="3" style="font-size: 12pt"><font color="#006600">Order_completed</font>
+	-  дали поръчката е завършена<br/>
+<font color="#006600"><b>User_id</b></font><b>
+	– </b><b>ID на потребител</b><br/>
+<font color="#ff3333">Email
+	– Емайл на клиента</font></font></font></p>
+	<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
+	<font color="#000000"><font size="3" style="font-size: 12pt"><font color="#006600">Name</font>
+	- Име на клиента<br/>
+</font></font><br/>
+
+	</p>
+	<li/>
+<p style="margin-bottom: 0in; line-height: 100%"><font color="#000000"><font size="3" style="font-size: 12pt"><b>basket_products
+	 ( линкваща таблица )<br/>
+</b></font></font><font color="#006600"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">User_id</span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">
+	- ( ID </span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">на
+	потребител</span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">
+	) <br/>
+</span></font></font><font color="#006600"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">User_password</span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">
+	 - </span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">Парола
+	на потребителя</span></font></font></p>
+	<p style="margin-bottom: 0in; line-height: 100%"><font color="#006600"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">Email</span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">
+	 - </span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">Е-майл
+	на потребителя</span></font></font><font color="#000000"><font size="4" style="font-size: 14pt"><b><br/>
+</b></font></font><br/>
+
+	</p>
+</ul>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><font color="#000000"><font size="4" style="font-size: 14pt"><b>-
+Потребителски вход и регистрация :</b></font></font></p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<ol>
+	<li/>
+<p style="margin-bottom: 0in; line-height: 100%"><font color="#000000"><font size="4" style="font-size: 14pt"><b>Страница
+	за вход <br/>
+</b><font size="3" style="font-size: 12pt"><span style="font-weight: normal">Форма
+	с потребителско име, парола и бутон за
+	вход.<br/>
+</span></font></font></font><br/>
+
+	</p>
+	<li/>
+<p style="margin-bottom: 0in; line-height: 100%"><font color="#000000"><font size="4" style="font-size: 14pt"><b>Страница
+	за регистрация<br/>
+</b><font size="3" style="font-size: 12pt"><span style="font-weight: normal">Форма
+	с потребителско име, парола, повторение
+	на парола, емайл и бутон за
+	регистрация.<br/>
+Паролата и повторението
+	на паролата трябва да съвпадат за да е
+	валидна формата.</span></font></font></font></p>
+	<p style="margin-bottom: 0in; line-height: 100%"><font color="#000000"><font size="4" style="font-size: 14pt"><font size="3" style="font-size: 12pt"><span style="font-weight: normal"><br/>
+</span></font></font></font><br/>
+
+	</p>
+</ol>
+</body>
+</html>
