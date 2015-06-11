@@ -1,246 +1,72 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<html>
-<head>
-	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-	<title></title>
-	<meta name="generator" content="LibreOffice 4.4.2.2 (Linux)"/>
-	<meta name="author" content="mraiur "/>
-	<meta name="created" content="2015-06-03T19:42:32.355397499"/>
-	<meta name="changedby" content="mraiur "/>
-	<meta name="changed" content="2015-06-03T21:19:01.311616028"/>
-	<style type="text/css">
-		@page { margin: 0.79in }
-		p { margin-bottom: 0.1in; line-height: 120% }
-	</style>
-</head>
-<body lang="bg-BG" dir="ltr">
-<p align="center" style="margin-bottom: 0in; line-height: 100%"><font color="#6666ff"><font size="6" style="font-size: 24pt"><b>Практически
-проект</b></font></font></p>
-<p align="center" style="margin-bottom: 0in; line-height: 100%"><br/>
-
-</p>
-<p align="center" style="margin-bottom: 0in; line-height: 100%"><font color="#6666ff"><font size="6" style="font-size: 24pt">Онлайн
-магазин за аксесоари за телефони.</font></font></p>
-<p style="margin-bottom: 0in; line-height: 100%"><br/>
-
-</p>
-<p style="margin-bottom: 0in; line-height: 100%"><font color="#6666ff"><font size="5" style="font-size: 18pt"><b>Основни
-изисквания</b></font></font></p>
-<p style="margin-bottom: 0in; line-height: 100%"><br/>
-
-</p>
-<p style="margin-bottom: 0in; line-height: 100%"><font color="#000000"><font size="4" style="font-size: 14pt"><b>-
-База данни:</b></font></font></p>
-<p style="margin-bottom: 0in; line-height: 100%"><br/>
-
-</p>
-<ol>
-	<li/>
-<p style="margin-bottom: 0in; line-height: 100%"><font color="#000000"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">Трябва
-	да се направи потребител в MySQL с ограничен
-	достъп ( SELECT, INSERT, UPDATE, DELETE )  до 
-	</span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><b>accessories_shop.</b></font></font></p>
-	<li/>
-<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
-	<font color="#000000"><font size="3" style="font-size: 12pt">Необходими
-	са следните таблици в MySQL база данни с
-	име accessories_shop.</font></font></p>
-</ol>
-<ul>
-	<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
-	</p>
-	<li/>
-<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%; page-break-before: auto">
-	<font color="#000000"><font size="3" style="font-size: 12pt"><b>product</b><br/>
-<font color="#006600">Product_id</font>
-	– ID на продукт<br/>
-<font color="#006600">Name</font> –
-	Име на продукт<br/>
-<font color="#006600">InStock</font>
-	– Дали продукта е в наличност<br/>
-</font></font><br/>
-
-	</p>
-	<li/>
-<p style="margin-bottom: 0in; line-height: 100%"><font color="#000000"><font size="3" style="font-size: 12pt"><b>basket
-	</b></font></font>
-	</p>
-	<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
-	<font color="#000000"><font size="3" style="font-size: 12pt"><font color="#006600">Basket_id</font>
-	– ID на текуща поръчка</font></font></p>
-	<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
-	<font color="#000000"><font size="3" style="font-size: 12pt"><font color="#006600">Order_completed</font>
-	-  дали поръчката е завършена<br/>
-<font color="#006600">Basket_session_hash</font>
-	– Номер на сесия за разграничаване на
-	поръчките<br/>
-<font color="#006600">Email</font> – Емайл
-	на клиента</font></font></p>
-	<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
-	<font color="#000000"><font size="3" style="font-size: 12pt"><font color="#006600">Name</font>
-	- Име на клиента<br/>
-</font></font><br/>
-
-	</p>
-	<li/>
-<p style="margin-bottom: 0in; line-height: 100%"><font color="#000000"><font size="3" style="font-size: 12pt"><b>basket_products
-	 ( линкваща таблица )<br/>
-</b><font color="#006600"><span style="font-weight: normal">Product_id</span></font><span style="font-weight: normal">
-	- ( ID на продукт ) <br/>
-</span><font color="#006600"><span style="font-weight: normal">Basket_id</span></font><span style="font-weight: normal">
-	 - ID на текуща поръчка</span><span style="font-weight: normal"><br/>
-</span><b><br/>
-</b></font></font><br/>
-
-	</p>
-</ul>
-<p style="margin-bottom: 0in; line-height: 100%"><font color="#000000"><font size="4" style="font-size: 14pt"><b>-
-Страници :<br/>
-<br/>
-</b></font></font><br/>
-
-</p>
-<ol>
-	<li/>
-<p style="margin-bottom: 0in; line-height: 100%"><font color="#000000"><font size="4" style="font-size: 14pt"><span style="font-weight: normal">Спис</span><span style="font-weight: normal">ък
-	с продуктите.<br/>
-</span><span style="font-weight: normal">Показване
-	на продуктите по един на ред на всеки
-	ред трябва да има.<br/>
-Име, снимка цена
-	и бутон за добавяне на продукт към
-	кошницата.<br/>
-</span></font></font><br/>
-
-	</p>
-	<li/>
-<p style="margin-bottom: 0in; line-height: 100%"><font color="#000000"><font size="4" style="font-size: 14pt"><span style="font-weight: normal">Страница
-	която да добавя или да маха продукти
-	от кошницата.<br/>
-„</span><span style="font-weight: normal">Системна“
-	страница която да обновява списъка на
-	кошницата.<br/>
-След като операцията е
-	завършена трябва да се пренасочи към
-	страницата от която е направена
-	операцията.<br/>
-</span></font></font><br/>
-
-	</p>
-	<li/>
-<p style="margin-bottom: 0in; line-height: 100%"><font color="#000000"><font size="4" style="font-size: 14pt"><span style="font-weight: normal">Преглед
-	на продуктите в кошницата.<br/>
-</span><span style="font-weight: normal">Списък
-	само с продуктите в кошницата, но вместо
-	бутон за добавяне трябва да има бутон
-	за премахване на продукт от кошницата.<br/>
-Форма
-	за Е-майл и Име на клиента.<br/>
-Поръчката
-	не може да бъде завършена ако не е
-	попълнен Е-майла и Името.<br/>
-Минимална
-	дължина на полето за име трябва да е 3
-	символа.  <br/>
-Минимална дължина на полето
-	за Е-Майл трябва да е 8 символа.<br/>
-</span></font></font><br/>
-
-	</p>
-	<li/>
-<p style="margin-bottom: 0in; line-height: 100%"><font color="#000000"><font size="4" style="font-size: 14pt"><span style="font-weight: normal">Завършване
-	на поръчка.<br/>
-</span><span style="font-weight: normal">След
-	валидацията трябва да се запише поръчката
-	в базата и да бъде отбелязана за
-	„завършена“.</span></font></font></p>
-</ol>
-<p style="margin-bottom: 0in; line-height: 100%"><br/>
-
-</p>
-<p style="margin-bottom: 0in; line-height: 100%"><br/>
-
-</p>
-<p style="margin-bottom: 0in; line-height: 100%"><font color="#6666ff"><font size="5" style="font-size: 18pt"><b>Допълнителни
-изисквания</b></font></font></p>
-<p style="margin-bottom: 0in; line-height: 100%"><br/>
-
-</p>
-<p style="margin-bottom: 0in; line-height: 100%"><font color="#000000"><font size="4" style="font-size: 14pt"><b>-
-База данни:<br/>
-</b></font></font><br/>
-
-</p>
-<ul>
-	<li/>
-<p style="margin-bottom: 0in; line-height: 100%"><font color="#000000"><font size="3" style="font-size: 12pt"><b>basket
-	</b></font></font>
-	</p>
-	<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
-	<font color="#000000"><font size="3" style="font-size: 12pt"><font color="#006600">Basket_id</font>
-	– ID на текуща поръчка</font></font></p>
-	<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
-	<font color="#000000"><font size="3" style="font-size: 12pt"><font color="#006600">Order_completed</font>
-	-  дали поръчката е завършена<br/>
-<font color="#006600"><b>User_id</b></font><b>
-	– </b><b>ID на потребител</b><br/>
-<font color="#ff3333">Email
-	– Емайл на клиента</font></font></font></p>
-	<p style="margin-bottom: 0in; font-weight: normal; line-height: 100%">
-	<font color="#000000"><font size="3" style="font-size: 12pt"><font color="#006600">Name</font>
-	- Име на клиента<br/>
-</font></font><br/>
-
-	</p>
-	<li/>
-<p style="margin-bottom: 0in; line-height: 100%"><font color="#000000"><font size="3" style="font-size: 12pt"><b>basket_products
-	 ( линкваща таблица )<br/>
-</b></font></font><font color="#006600"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">User_id</span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">
-	- ( ID </span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">на
-	потребител</span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">
-	) <br/>
-</span></font></font><font color="#006600"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">User_password</span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">
-	 - </span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">Парола
-	на потребителя</span></font></font></p>
-	<p style="margin-bottom: 0in; line-height: 100%"><font color="#006600"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">Email</span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">
-	 - </span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">Е-майл
-	на потребителя</span></font></font><font color="#000000"><font size="4" style="font-size: 14pt"><b><br/>
-</b></font></font><br/>
-
-	</p>
-</ul>
-<p style="margin-bottom: 0in; line-height: 100%"><br/>
-
-</p>
-<p style="margin-bottom: 0in; line-height: 100%"><font color="#000000"><font size="4" style="font-size: 14pt"><b>-
-Потребителски вход и регистрация :</b></font></font></p>
-<p style="margin-bottom: 0in; line-height: 100%"><br/>
-
-</p>
-<ol>
-	<li/>
-<p style="margin-bottom: 0in; line-height: 100%"><font color="#000000"><font size="4" style="font-size: 14pt"><b>Страница
-	за вход <br/>
-</b><font size="3" style="font-size: 12pt"><span style="font-weight: normal">Форма
-	с потребителско име, парола и бутон за
-	вход.<br/>
-</span></font></font></font><br/>
-
-	</p>
-	<li/>
-<p style="margin-bottom: 0in; line-height: 100%"><font color="#000000"><font size="4" style="font-size: 14pt"><b>Страница
-	за регистрация<br/>
-</b><font size="3" style="font-size: 12pt"><span style="font-weight: normal">Форма
-	с потребителско име, парола, повторение
-	на парола, емайл и бутон за
-	регистрация.<br/>
-Паролата и повторението
-	на паролата трябва да съвпадат за да е
-	валидна формата.</span></font></font></font></p>
-	<p style="margin-bottom: 0in; line-height: 100%"><font color="#000000"><font size="4" style="font-size: 14pt"><font size="3" style="font-size: 12pt"><span style="font-weight: normal"><br/>
-</span></font></font></font><br/>
-
-	</p>
-</ol>
-</body>
-</html>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN" "http://www.w3.org/Math/DTD/mathml2/xhtml-math11-f.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><!--This file was converted to xhtml by LibreOffice - see http://cgit.freedesktop.org/libreoffice/core/tree/filter/source/xslt for the code.--><head profile="http://dublincore.org/documents/dcmi-terms/"><meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/><title xml:lang="en-US">- no title specified</title><meta name="DCTERMS.title" content="" xml:lang="en-US"/><meta name="DCTERMS.language" content="en-US" scheme="DCTERMS.RFC4646"/><meta name="DCTERMS.source" content="http://xml.openoffice.org/odf2xhtml"/><meta name="DCTERMS.creator" content="mraiur "/><meta name="DCTERMS.issued" content="2015-06-03T19:42:32.355397499" scheme="DCTERMS.W3CDTF"/><meta name="DCTERMS.contributor" content="mraiur "/><meta name="DCTERMS.modified" content="2015-06-10T23:08:50.087442589" scheme="DCTERMS.W3CDTF"/><meta name="DCTERMS.provenance" content="" xml:lang="en-US"/><meta name="DCTERMS.subject" content="," xml:lang="en-US"/><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" hreflang="en"/><link rel="schema.DCTERMS" href="http://purl.org/dc/terms/" hreflang="en"/><link rel="schema.DCTYPE" href="http://purl.org/dc/dcmitype/" hreflang="en"/><link rel="schema.DCAM" href="http://purl.org/dc/dcam/" hreflang="en"/><style type="text/css">
+	@page {  }
+	table { border-collapse:collapse; border-spacing:0; empty-cells:show }
+	td, th { vertical-align:top; font-size:12pt;}
+	h1, h2, h3, h4, h5, h6 { clear:both }
+	ol, ul { margin:0; padding:0;}
+	li { list-style: none; margin:0; padding:0;}
+	<!-- "li span.odfLiEnd" - IE 7 issue-->
+	li span. { clear: both; line-height:0; width:0; height:0; margin:0; padding:0; }
+	span.footnodeNumber { padding-right:1em; }
+	span.annotation_style_by_filter { font-size:95%; font-family:Arial; background-color:#fff000;  margin:0; border:0; padding:0;  }
+	* { margin:0;}
+	.P1 { font-size:12pt; font-family:Liberation Serif; writing-mode:page; }
+	.P10 { font-size:14pt; font-family:Liberation Serif; writing-mode:page; color:#000000; font-weight:bold; }
+	.P11 { font-size:12pt; font-family:Liberation Serif; writing-mode:page; }
+	.P12 { font-size:12pt; font-family:Liberation Serif; writing-mode:page; color:#000000; font-weight:normal; }
+	.P13 { font-size:12pt; font-family:Liberation Serif; writing-mode:page; color:#000000; font-weight:normal; }
+	.P14 { font-size:12pt; font-family:Liberation Serif; writing-mode:page; color:#000000; font-weight:normal; }
+	.P15 { font-size:12pt; font-family:Liberation Serif; writing-mode:page; color:#000000; font-weight:normal; }
+	.P16 { font-size:12pt; font-family:Liberation Serif; writing-mode:page; color:#000000; font-weight:normal; }
+	.P17 { font-size:12pt; font-family:Liberation Serif; writing-mode:page; color:#000000; font-weight:normal; }
+	.P18 { font-size:12pt; font-family:Liberation Serif; writing-mode:page; color:#000000; font-weight:bold; }
+	.P19 { font-size:12pt; font-family:Liberation Serif; writing-mode:page; color:#000000; font-weight:bold; }
+	.P2 { font-size:12pt; font-family:Liberation Serif; writing-mode:page; }
+	.P20 { font-size:12pt; font-family:Liberation Serif; writing-mode:page; color:#000000; font-weight:bold; }
+	.P21 { font-size:14pt; font-family:Liberation Serif; writing-mode:page; color:#000000; font-weight:bold; }
+	.P22 { font-size:14pt; font-family:Liberation Serif; writing-mode:page; color:#000000; font-weight:bold; }
+	.P23 { font-size:14pt; font-family:Liberation Serif; writing-mode:page; color:#000000; font-weight:bold; }
+	.P25 { font-size:12pt; font-family:Liberation Serif; writing-mode:page; }
+	.P26 { font-size:12pt; font-family:Liberation Serif; writing-mode:page; }
+	.P27 { font-size:12pt; font-family:Liberation Serif; writing-mode:page; margin-left:0.5in; margin-right:0in; text-indent:-0.25in; color:#000000; font-weight:normal; }
+	.P28 { font-size:12pt; font-family:Liberation Serif; writing-mode:page; color:#000000; font-weight:normal; }
+	.P3 { font-size:24pt; font-family:Liberation Serif; writing-mode:page; text-align:center ! important; color:#6666ff; }
+	.P4 { font-size:24pt; font-family:Liberation Serif; writing-mode:page; text-align:center ! important; color:#6666ff; font-weight:bold; }
+	.P5 { font-size:18pt; font-family:Liberation Serif; writing-mode:page; color:#6666ff; font-weight:bold; }
+	.P6 { font-size:14pt; font-family:Liberation Serif; writing-mode:page; color:#000000; font-weight:bold; }
+	.P7 { font-size:14pt; font-family:Liberation Serif; writing-mode:page; color:#000000; font-weight:bold; }
+	.P8 { font-size:14pt; font-family:Liberation Serif; writing-mode:page; color:#000000; font-weight:bold; }
+	.P9 { font-size:14pt; font-family:Liberation Serif; writing-mode:page; color:#000000; font-weight:bold; }
+	.Bullet_20_Symbols { font-family:OpenSymbol; }
+	.T10 { color:#000000; font-size:12pt; font-weight:normal; }
+	.T11 { color:#000000; font-size:12pt; font-weight:bold; }
+	.T12 { color:#000000; font-size:12pt; font-weight:bold; }
+	.T13 { color:#000000; font-size:14pt; font-weight:bold; }
+	.T14 { font-weight:normal; }
+	.T15 { font-weight:normal; }
+	.T16 { font-weight:normal; }
+	.T17 { font-weight:normal; }
+	.T18 { font-weight:normal; }
+	.T19 { font-weight:normal; }
+	.T2 { font-weight:bold; }
+	.T20 { font-weight:normal; }
+	.T21 { font-weight:normal; }
+	.T24 { color:#006600; }
+	.T25 { color:#006600; }
+	.T26 { color:#006600; }
+	.T27 { color:#006600; font-weight:normal; }
+	.T28 { color:#006600; font-weight:normal; }
+	.T3 { font-weight:bold; }
+	.T32 { color:#006600; font-size:12pt; font-weight:normal; }
+	.T33 { color:#006600; font-size:12pt; font-weight:normal; }
+	.T34 { color:#006600; font-weight:bold; }
+	.T36 { font-size:12pt; font-weight:normal; }
+	.T38 { color:#ff3333; }
+	.T39 { color:#ff3333; font-size:12pt; font-weight:normal; }
+	.T4 { font-weight:bold; }
+	.T5 { color:#000000; font-size:12pt; font-weight:normal; }
+	.T9 { color:#000000; font-size:12pt; font-weight:normal; }
+	<!-- ODF styles with no properties representable as CSS -->
+	.Numbering_20_Symbols .T1 .T22 .T23 .T35 .T37 .T40  { }
+	</style></head><body dir="ltr" style="max-width:8.2681in;margin-top:0.7874in; margin-bottom:0.7874in; margin-left:0.7874in; margin-right:0.7874in; "><p class="P4">Практически проект</p><p class="P3"> </p><p class="P3">Онлайн магазин за аксесоари за телефони.</p><p class="P1"> </p><p class="P5"><span class="T40">Основни</span> изисквания</p><p class="P5"> </p><p class="P6">- <span class="T1">База данни:</span></p><p class="P6"> </p><ol><li><p class="P11" style="margin-left:0cm;"><span class="Numbering_20_Symbols" style="display:block;float:left;min-width:NaNcm;">1.</span><span class="T5">Трябва да се направи потребител в MySQL с ограничен достъп ( SELECT, INSERT, UPDATE, DELETE )  до  </span><span class="T11">accessories_shop.</span><span class="odfLiEnd"/> </p></li><li><p class="P13" style="margin-left:0cm;"><span class="Numbering_20_Symbols" style="display:block;float:left;min-width:NaNcm;">2.</span>Необходими са следните таблици в MySQL база данни с име accessories_shop.<span class="odfLiEnd"/> </p></li></ol><ul><li><p class="P12"> </p></li><li><p class="P27" style="margin-left:0cm;"><span class="Bullet_20_Symbols" style="display:block;float:left;min-width:NaNcm;">•</span><span class="T3">product</span><span class="T1"><br/></span><span class="T26">Product_id</span><span class="T1"> – ID на продукт<br/></span><span class="T26">Name</span><span class="T1"> – Име на продукт<br/></span><span class="T26">InStock</span><span class="T1"> – Дали продукта е в наличност<br/></span><span class="odfLiEnd"/> </p></li><li><p class="P18" style="margin-left:0cm;"><span class="Bullet_20_Symbols" style="display:block;float:left;min-width:NaNcm;">•</span>basket <span class="odfLiEnd"/> </p><p class="P14" style="margin-left:0cm;"><span class="Bullet_20_Symbols" style="display:block;float:left;min-width:0cm"><!-- --></span><span class="T24">Basket_id</span> – ID на текуща поръчка<span class="odfLiEnd"/> </p><p class="P15" style="margin-left:0cm;"><span class="Bullet_20_Symbols" style="display:block;float:left;min-width:0cm"><!-- --></span><span class="T24">Order_completed</span> -  дали поръчката е завършена<br/><span style="margin-left:0cm"/><span class="T24">Basket_session_hash</span> – Номер на сесия за разграничаване на поръчките<br/><span style="margin-left:0cm"/><span class="T25">Email</span><span class="T23"> – Емайл на клиента</span><span class="odfLiEnd"/> </p><p class="P15" style="margin-left:0cm;"><span class="Bullet_20_Symbols" style="display:block;float:left;min-width:0cm"><!-- --></span><span class="T25">Name</span><span class="T23"> - Име на клиента</span><br/><span style="margin-left:0cm"/><span class="odfLiEnd"/> </p></li><li><p class="P19" style="margin-left:0cm;"><span class="Bullet_20_Symbols" style="display:block;float:left;min-width:NaNcm;">•</span>basket_products  ( линкваща таблица )<br/><span style="margin-left:0cm"/><span class="T27">Product_id</span><span class="T14"> - ( ID на продукт ) <br/></span><span class="T28">Basket_id</span><span class="T15">  - ID на текуща поръчка</span><span class="T14"><br/></span><br/><span style="margin-left:0cm"/><span class="odfLiEnd"/> </p></li></ul><p class="P7">- <span class="T22">Страници :<br/><br/></span></p><ol><li><p class="P21" style="margin-left:0cm;"><span class="Numbering_20_Symbols" style="display:block;float:left;min-width:NaNcm;">1.</span><span class="T16">Спис</span><span class="T17">ък с продуктите.<br/></span><span class="T18">Показване на продуктите по един на ред на всеки ред трябва да има.<br/>Име, снимка цена и бутон за добавяне на продукт към кошницата.<br/></span><span class="odfLiEnd"/> </p></li><li><p class="P22" style="margin-left:0cm;"><span class="Numbering_20_Symbols" style="display:block;float:left;min-width:NaNcm;">2.</span><span class="T14">Страница която да добавя или да маха продукти от кошницата.<br/>„</span><span class="T19">Системна“ страница която да обновява списъка на кошницата.<br/>След като операцията е завършена трябва да се пренасочи към страницата от която е направена операцията.<br/></span><span class="odfLiEnd"/> </p></li><li><p class="P22" style="margin-left:0cm;"><span class="Numbering_20_Symbols" style="display:block;float:left;min-width:NaNcm;">3.</span><span class="T14">Преглед на продуктите в кошницата.<br/></span><span class="T20">Списък само с продуктите в кошницата, но вместо бутон за добавяне трябва да има бутон за премахване на продукт от кошницата.<br/>Форма за Е-майл и Име на клиента.<br/></span><span class="T20">Поръчката не може да бъде завършена ако не е попълнен Е-майла и Името.<br/>Минимална дължина на полето за име трябва да е 3 символа.  <br/>Минимална дължина на полето за Е-Майл трябва да е 8 символа.<br/></span><span class="odfLiEnd"/> </p></li><li><p class="P22" style="margin-left:0cm;"><span class="Numbering_20_Symbols" style="display:block;float:left;min-width:NaNcm;">4.</span><span class="T14">Завършване на поръчка.<br/></span><span class="T21">След валидацията трябва да се запише поръчката в базата и да бъде отбелязана за „завършена“.</span><span class="odfLiEnd"/> </p></li></ol><p class="P7"> </p><p class="P5"> </p><p class="P5">Допълнителни изисквания</p><p class="P2"> </p><p class="P9">- <span class="T37">База данни:<br/></span></p><ul><li><p class="P20" style="margin-left:0cm;"><span class="Bullet_20_Symbols" style="display:block;float:left;min-width:NaNcm;">•</span>basket <span class="odfLiEnd"/> </p><p class="P16" style="margin-left:0cm;"><span class="Bullet_20_Symbols" style="display:block;float:left;min-width:0cm"><!-- --></span><span class="T24">Basket_id</span> – ID на текуща поръчка<span class="odfLiEnd"/> </p><p class="P16" style="margin-left:0cm;"><span class="Bullet_20_Symbols" style="display:block;float:left;min-width:0cm"><!-- --></span><span class="T24">Order_completed</span> -  дали поръчката е завършена<br/><span style="margin-left:0cm"/><span class="T34">User_id</span><span class="T2"> – </span><span class="T4">ID на потребител</span><br/><span style="margin-left:0cm"/><span class="T38">Email – Емайл на клиента</span><span class="odfLiEnd"/> </p><p class="P25" style="margin-left:0cm;"><span class="Bullet_20_Symbols" style="display:block;float:left;min-width:0cm"><!-- --></span><span class="T39">Name - Име на клиента</span><span class="T5"><br/></span><span class="odfLiEnd"/> </p></li><li><p class="P26" style="margin-left:0cm;"><span class="Bullet_20_Symbols" style="display:block;float:left;min-width:NaNcm;">•</span><span class="T12">users<br/></span><span class="T32">User_id</span><span class="T5"> – ID на </span><span class="T9">потребител</span><span class="odfLiEnd"/> </p><p class="P28" style="margin-left:0cm;"><span class="Bullet_20_Symbols" style="display:block;float:left;min-width:0cm"><!-- --></span><span class="T25">Email</span><span class="T23"> – Емайл на клиента</span><span class="odfLiEnd"/> </p><p class="P26" style="margin-left:0cm;"><span class="Bullet_20_Symbols" style="display:block;float:left;min-width:0cm"><!-- --></span><span class="T33">Name</span><span class="T10"> - Име на клиента</span><span class="T13"><br/></span><span class="odfLiEnd"/> </p></li></ul><p class="P2"> </p><p class="P8">- <span class="T35">Потребителски вход и регистрация :</span></p><p class="P10"> </p><ol><li><p class="P23" style="margin-left:0cm;"><span class="Numbering_20_Symbols" style="display:block;float:left;min-width:NaNcm;">1.</span>Страница за вход <br/><span style="margin-left:0cm"/><span class="T36">Форма с потребителско име, парола и бутон за вход.<br/></span><span class="odfLiEnd"/> </p></li><li><p class="P23" style="margin-left:0cm;"><span class="Numbering_20_Symbols" style="display:block;float:left;min-width:NaNcm;">2.</span>Страница за регистрация<br/><span style="margin-left:0cm"/><span class="T36">Форма с потребителско име, парола, повторение на парола, емайл и бутон за регистрация.<br/>Паролата и повторението на паролата трябва да съвпадат за да е валидна формата.</span><span class="odfLiEnd"/> </p><p class="P17" style="margin-left:0cm;"><span class="Numbering_20_Symbols" style="display:block;float:left;min-width:0cm"><!-- --></span><br/><span style="margin-left:0cm"/><span class="odfLiEnd"/> </p></li></ol></body></html>
