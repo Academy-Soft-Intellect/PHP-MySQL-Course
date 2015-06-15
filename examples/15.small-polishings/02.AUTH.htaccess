@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Huh ?"
+AuthUserFile 02.AUTH.htpasswd
+Require valid-user
